@@ -33,6 +33,10 @@ class Manager extends Employee {
 		System.out.println("Manager \"" + name + "\" works hard with his subordinates in "
 		+ dept + " dept.");
 	}
+	
+	public void manage() {
+		System.out.println("Manager \"" + name + "\" manages his dept.");
+	}
 }
 
 public class Company {
@@ -55,8 +59,11 @@ public class Company {
 	
 	public void makeMoney() {
 		int n = employees.length;
-		for(int i=0; i<n; i++)
+		for(int i=0; i<n; i++) {
 			employees[i].work();
+			if(employees[i] instanceof Manager)
+				((Manager)employees[i]).manage();
+		}
 	}
 	
 	public static void main(String[] args) {
