@@ -51,7 +51,7 @@ class Audio extends Product {
 class Buyer {
 	int money = 1000;
 	int bonusPoint = 0;
-	Vector item = new Vector();
+	Vector<Product> item = new Vector<Product>();
 	
 	void buy(Product p) {
 		if(money < p.price) {
@@ -85,7 +85,7 @@ class Buyer {
 		}
 		
 		for(int i=0; i<item.size(); i++) {
-			Product p = (Product)item.get(i);
+			Product p = item.get(i);
 			sum += p.price;
 			itemList += (i==0) ? "" + p : ", " + p;
 		}
