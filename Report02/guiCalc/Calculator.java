@@ -9,6 +9,7 @@ public class Calculator {
 	// Member Variables
 	private double num1;
 	private double num2;
+	private char op;
 	
 	// Constructor
 	public Calculator() {}
@@ -25,7 +26,13 @@ public class Calculator {
 	}
 	public void setNum2(double num2) {
 		this.num2 = num2;
-	}	
+	}
+	public void setOp(char op) {
+		this.op = op;
+	}
+	public char getOp() {
+		return op;
+	}
 	
 	// Member Methods
 	public double sum() {
